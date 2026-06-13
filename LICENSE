@@ -1,6 +1,11 @@
+
+
+This license applies only to the VS Code extension package located in the vscode/ directory.
+The Rust bea-c core and CLI outside this directory are not covered by this license unless separately stated.
+
 MIT License
 
-Copyright (c) 2026 newssourcecrawler
+Copyright (c) 2026 NSC Labs
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

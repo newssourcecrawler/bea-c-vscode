@@ -1,0 +1,51 @@
+{
+  "name": "bea-c",
+  "displayName": "bea-c",
+  "description": "Local evidence reader for exported logs and transcripts. No live collection. No monitoring. No cloud upload.",
+  "version": "0.1.0",
+  "publisher": "nsc-labs",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:beac.readEvidenceFile",
+    "onCommand:beac.readEvidenceFileJson"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "beac.readEvidenceFile",
+        "title": "bea-c: Read Evidence File"
+      },
+      {
+        "command": "beac.readEvidenceFileJson",
+        "title": "bea-c: Read Evidence File as JSON"
+      }
+    ],
+    "configuration": {
+      "title": "bea-c",
+      "properties": {
+        "beac.binaryPath": {
+          "type": "string",
+          "default": "bea-c",
+          "description": "Path to the local bea-c CLI binary."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "check": "tsc -p ./ --noEmit",
+    "vscode:prepublish": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "@types/vscode": "^1.90.0",
+    "typescript": "^5.5.3"
+  }
+}
